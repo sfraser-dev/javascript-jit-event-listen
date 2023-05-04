@@ -15,27 +15,27 @@ btnBulbOff.addEventListener("click", () => {
 
 //---------- Paragraph change on hover:
 // grab the paragraph by its ID and set some default styling values 
+const parDefaultColor = "black";
+const parDefaultBackgroundColor = "gray";
 const parHover = document.getElementById("pHover");
-const parOriginalText = parHover.innerHTML;
-const parOriginalColor = "black";
-const parOriginalBackgroundColor = "gray";
-parHover.style.color = parOriginalColor;
-parHover.style.backgroundColor = parOriginalBackgroundColor;
-// change paragraph on mouse over
+const parDefaultText = parHover.innerHTML;
+parHover.style.color = parDefaultColor;
+parHover.style.backgroundColor = parDefaultBackgroundColor;
+// change paragraph styling on mouse over
 parHover.addEventListener("mouseover", () => {
     parHover.innerText = "May the force be with you";
     parHover.style.color = "green";
     parHover.style.backgroundColor = "yellow";
 });
-// change paragraph on mouse out
+// change paragraph back to default styling on mouse out
 parHover.addEventListener("mouseout", () => {
-    parHover.innerText = parOriginalText;
-    parHover.style.color = parOriginalColor;
-    parHover.style.backgroundColor = parOriginalBackgroundColor;
+    parHover.innerText = parDefaultText;
+    parHover.style.color = parDefaultColor;
+    parHover.style.backgroundColor = parDefaultBackgroundColor;
 });
 
 
-//---------- Window resize:
+//---------- Window resizing generates new random numbers:
 // grab the random number paragraph by its ID and initialise it
 const hRand = document.getElementById("hRandom");
 const pRand = document.getElementById("pRandom");
